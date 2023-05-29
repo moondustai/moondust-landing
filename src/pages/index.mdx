@@ -1,0 +1,21 @@
+import { SparkleIcon } from '@/components/SparkleIcon'
+import { generateRssFeed } from '@/lib/generateRssFeed'
+
+export async function getStaticProps() {
+  if (process.env.NODE_ENV === 'production') {
+    await generateRssFeed()
+  }
+  return { props: {} }
+}
+
+---
+
+![](@/images/coming-soon.jpg)
+
+## Version v0.0.1 Alpha Status {{  date: '2023-05-29T00:00Z' }}
+
+Welcome! We're working towards our first release of Moondust. If you're interested in signing up all early access users will get one year of service for free, after we come out of beta.
+
+### What we're building
+
+Moondust will be a developer platform for inserting advertisements into your ChatGPT integration. The API will be familiar if you've already started building tools on top of ChatGPT. We'll add an extra meta layer over it that keeps track of the conversation and knows when to insert ads based on your rules.
