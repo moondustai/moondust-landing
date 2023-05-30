@@ -18,9 +18,12 @@ const nextConfig = {
   output: 'export',
   reactStrictMode: true,
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
-  experimental: {
-    scrollRestoration: true,
+  images: {
+    unoptimized: true,
   },
+  // experimental: {
+  //   scrollRestoration: true,
+  // },
 }
 
 export default withMDX(nextConfig)
